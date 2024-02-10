@@ -16,5 +16,11 @@ jobs:
     steps:
     - name: Echo Hello World
       run: echo Hello World
+
     - name: Echo github variable
       run: echo ${{ github }}
+
+    - name: Run JavaScript
+      run: |
+        console.log('Hello from JavaScript!');
+      shell: bash
