@@ -20,7 +20,7 @@ jobs:
     - name: Echo github variable
       run: echo ${{ github }}
 
-    - name: Run JavaScript
+    - name: To Json
       run: |
-        console.log('Hello from JavaScript!');
-      shell: bash
+       json_string=$(echo "${{ github }}" | jq -c tostring)
+       echo "$json_string"
