@@ -20,7 +20,12 @@ jobs:
     - name: Echo github variable
       run: echo ${{ github }}
 
-    - name: To Json
-      run: |
-       json_string=$(echo "${{ github }}" | jq -c tostring)
-       echo "$json_string"
+    # - name: To Json
+    #   run: |
+    #    json_string=$(echo "${{ github }}" | jq -c tostring)
+    #    echo "$json_string"
+
+    - uses: actions/github-script@v7
+      with:
+        script: |
+          console.log(JSON.toString(github));
