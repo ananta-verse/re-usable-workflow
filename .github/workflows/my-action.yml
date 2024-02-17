@@ -26,4 +26,4 @@ jobs:
         with:
           token: ${{ secrets.envPAT }}
       
-      - run: echo ${{ inputs.word-to-print }}
+      - run: echo "${{ inputs.word-to-print }}"
