@@ -4,9 +4,9 @@ on:
       word-to-print:
         required: true
         type: string
-    # secrets:
-    #   envPAT:
-    #     required: true
+    secrets:
+      envPAT:
+        required: true
 
 
 jobs:
