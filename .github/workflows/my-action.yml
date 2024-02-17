@@ -1,0 +1,21 @@
+on:
+  workflow_call:
+    inputs:
+      word-to-print:
+        required: true
+        type: string
+    secrets:
+      envPAT:
+        required: true
+
+
+jobs:
+  reusable_workflow_job:
+    runs-on: ubuntu-latest
+    # environment: production
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.envPAT }}
+      
+      - run: echo ${{ inputs.word-to-print }}
