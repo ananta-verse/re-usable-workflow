@@ -10,6 +10,14 @@ on:
 
 
 jobs:
+
+  print-pre-requisite:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print pre-requisites
+        run: echo ${{ inputs.word-to-print }}
+
   reusable_workflow_job:
     runs-on: ubuntu-latest
     # environment: production
