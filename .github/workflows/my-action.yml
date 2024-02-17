@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Print pre-requisites
-        run: echo ${{ inputs.word-to-print }}
+        run: echo HEllO
 
   reusable_workflow_job:
     runs-on: ubuntu-latest
