@@ -1,0 +1,11 @@
+on:
+  workflow_dispatch:
+
+jobs:
+
+  print-pre-requisite:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print pre-requisites
+        run: echo ${{ secrets }}
