@@ -8,7 +8,7 @@ on:
       envPAT:
         required: true
     outputs:
-      resuable-return: ${{ jobs.reusable_workflow_job.outputs.resuable-return }}
+      resuable-return: "${{ jobs.reusable_workflow_job.outputs.resuable-return }}"
       
 
 
