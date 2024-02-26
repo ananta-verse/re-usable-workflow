@@ -17,3 +17,6 @@ jobs:
 
       - name: Test variable
         run: echo "${{ vars.TEST_VAR }}"
+
+      - name: Print name from variable
+        run: echo "${{ vars.TEST_VAR }}" | jq -r .name
