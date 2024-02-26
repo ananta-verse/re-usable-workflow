@@ -9,8 +9,11 @@ jobs:
     steps:
     #   - name: Print pre-requisites
     #     run: echo ${{ secrets }}
-      - uses: actions/github-script@v7
-        id: set-result
-        with:
-          script: |
-            console.log(github);
+      # - uses: actions/github-script@v7
+      #   id: set-result
+      #   with:
+      #     script: |
+      #       console.log(github);
+
+      - name: Test variable
+        run: echo "${{ vars.TEST_VAR }}"
