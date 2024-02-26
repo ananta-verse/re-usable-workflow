@@ -20,6 +20,8 @@ jobs:
 
   reusable_workflow_job:
     runs-on: ubuntu-latest
+    outputs:
+      resuable-return: ${{ steps.output-set.outputs.myVar }}
     # environment: production
     steps:
       - uses: actions/checkout@v4
@@ -27,3 +29,6 @@ jobs:
           token: ${{ secrets.envPAT }}
       
       - run: echo "${{ inputs.word-to-print }}"
+
+      - id: output-set
+        run: echo "myVar=$(echo helloTest)" >> GITHUB_OUTPUT
