@@ -36,4 +36,4 @@ jobs:
       - run: echo "${{ inputs.word-to-print }}"
 
       - id: output-set
-        run: echo "myVar=helloTest" >> GITHUB_OUTPUT
+        run: echo "myVar=helloTest" >> $GITHUB_OUTPUT
